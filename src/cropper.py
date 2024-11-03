@@ -1,4 +1,4 @@
-from PIL import Image as PILImage     # Aliasing PIL's Image
+from PIL import Image as PILImage
 import os
 import tkinter.messagebox
 
