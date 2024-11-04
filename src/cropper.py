@@ -42,7 +42,7 @@ def create_cropped_versions(image_path, pixelsPerCut = 10):
             # Crop and save the image if the region is valid
             if right > left and bottom > top:
                 cropped_image = original_image.crop((left, top, right, bottom))
-                output_filename = os.path.join(output_dir, f'cropped_{photo_name}_{w + 1}_{h + 1}.jpg')
+                output_filename = os.path.join(output_dir, f'cropped_{photo_name}_{w * pixelsPerCut}_{h * pixelsPerCut}.jpg')
                 try:
                     cropped_image.save(output_filename)
                 except Exception as e:
